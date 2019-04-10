@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+
+
+
 .table{
   border:solid #dedede 1px;
   table-layout: fixed;
   width:100%;
 }
 
-thead th{
+.table th{
 background:#2244aa;
 color:white;
 padding:10px;
@@ -16,7 +19,7 @@ line-height: 26px;
 border:solid #dedede 1px;
 }
 
-tr td{
+.table td{
   padding:10px;
   font-size:16px;
   line-height: 22px;
@@ -25,21 +28,8 @@ tr td{
   vertical-align: middle;
   }
 
-tr:nth-child(2n){
+.table tr:nth-child(2n){
   background: #ecf1f2;
-}
-
-tr th:first-child{
- background-color:#2244aa;
- color:white;
- padding: 10px;
- font-size:18px;
-line-height: 26px;
-border: solid #dedede 1px;
-}
-
-tr th:first-child{
-  background:#2244aa;
 }
 
 .table tbody tr:last-child{

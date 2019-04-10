@@ -41,12 +41,6 @@
   transition:all 0.5s;
 }
 
-.car-sentence-container:hover {
-  position: absolute;
-  top:0px;
-  left:0;
-}
-
 /* absoluteはrelativeに対して絶対配置するが、
 absolute当たった要素にabsoluteの兄があれば
 relativeではなくて兄にたいして絶対配置する */
@@ -64,13 +58,6 @@ relativeではなくて兄にたいして絶対配置する */
   word-break: break-all;
 }
 
-
-.car-sentence:hover {
-  position: absolute;
-  top:0;
-  left:0;
-  padding: 20px;
-}
 
 /* ここまでtransitionのアニメーション */
 
@@ -129,3 +116,4 @@ relativeではなくて兄にたいして絶対配置する */
 
 
 /* 回答はここに書いてね */
+/* review sentenceが画像下に固定されていない */

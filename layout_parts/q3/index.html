@@ -41,13 +41,15 @@
         <div class="q3">
           <table class="table">
             <thead>
-              <th>日付</th>
-              <th>朝ごはん</th>
-              <th>昼ごはん</th>
-              <th>おやつ</th>
-              <th>夜ご飯</th>
-              <th>夜食</th>
-            <thread>
+              <tr>
+                <th>日付</th>
+                <th>朝ごはん</th>
+                <th>昼ごはん</th>
+                <th>おやつ</th>
+                <th>夜ご飯</th>
+                <th>夜食</th>
+              </tr>
+            <thead>
             <tbody>
               <tr>
                 <th>2016/04/01</th>
@@ -97,3 +99,7 @@
     </div>
   </body>
 </html>
+<!-- review タグ名間違い　tr抜け(ブラウザ)セレクタにタグ名だけは禁止。
+  クラス名使う偶数、奇数　2n以外の記述方法 偶数　nth-child:(even)　奇数　odd;
+修正　theadのtrタグ追加。
+スタイルの共通化(th、tdに当たっているスタイルが二重になっていた。.table th とth:first-childを一つに。また.table thead thのthead抜かしてth全部に当たるように)-->

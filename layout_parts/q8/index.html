@@ -100,66 +100,66 @@
           <!-- すでについてるクラスにはstyleを指定しない。styleを付ける場合は自分で新たにクラスをつけること -->
           <div class="q8 q8-background">
             <form action="" method="GET">
-            <div class="Form-title">
-              <p class="Form-Exercise">Form Exercise</p>
-            </div>
-              <div class="clearfix q8-form-container">
-                <div class="q8-label">
-                  <div class="name-label q8-label-content">名前<span>*</span></div>
-                  <div class="gender q8-label-content">性別</div>
-                  <div class="graduate q8-label-content">出身</div>
-                  <div class="mail q8-label-content">Eメール<span>*</span></div>
-                  <div class="tel-number q8-label-content">電話番号</div>
-                </div>
-                <!--outline, border共にスタイルを消して:forcusにてフォーカスしたときのスタイルを当てる-->
-                <div class="q8-text">
-                  <div class="q8-text_name q8-text-content">
-                    <input class="q8-text-name-input" type="text" name="name" required>
-                  </div>
-                  <!--:checkedにてスタイル-->
-                  <!-- 属性セレクタ(input[type=radio])にて指定したradioボタンをdisplya:none;にて非表示にして新たにスタイルを当てる -->
-                  <!-- radioボタン作成：labelタグにてラベルと部品(ボタン)をラッピングするとラベルとradio部品が関連づく。 -->
-                  <!--cursor:pointerにて部品、ラベル上にてマウスカーソルから指差しマークに変化する;-->
-                  <div class="q8-text_gender q8-text-content">
-                    <label class="q8-text-gender-male">
-                      <input class="q8-text-gender-input-male" type="radio" name="gender" value="male"><span class="q8-text_gender-male-span">男性</span>
-                    </label>
-                    <label class="q8-text-gender-female">
-                      <input class="q8-text-gender-input-female" type="radio" name="gender" value="female"><span class="q8-text_gender-female-span">女性</span>
-                    </label>
-                  </div>
-                  <!--cursor:pointer;-->
-                  <div class="q8-text_graduate q8-text-content">
-                    <select name="hometown" class="select-graduate">
-                      <option value="tokyo">東京</option>
-                      <option value="saitama">埼玉</option>
-                      <option value="chiba">千葉</option>
-                      <option value="kanagawa">神奈川</option>
-                    </select>
-                  </div>
-                  <div class="q8-text_mail q8-text-content">
-                    <input class="q8-text_mail-input" type="text" name="mail"  placeholder="ex) hoge@gmail.com" required>
-                  </div>
-                  <div class="q8-text_tel-number q8-text-content">
-                    <input class="q8-text_tel-number-input" type="text" name="tel"  placeholder="ex) 08012345678">
-                  </div>
-                  <!--:checkedにてスタイル-->
-                  <!--checkboxはlabelタグとボックス作る-->
-                  <div class="q8-text_age q8-text-content">
-                    <label class="q8-text_age-label">
-                      <!--checkboxの場合、nameとvalueがurlに記述、valueの意味-->
-                      <input class="q8-text_age-input" type="checkbox" name="twenty" value="true"><span class="q8-text_age-input-span">20歳以上です</span>
-                    </label>
-                  </div>
-                  <!--buttonタグにて-->
-                  <div class="q8-text_transmission q8-text-content">
-                    <button class="q8-text-button" type="submit">送信</button>
-                  </div>
-                </div>
-                <div class="q8-textarea_container">
-                  <textarea name="message" class="q8-textarea" placeholder="何かあれば入力してください"></textarea>
-                </div>
+              <div class="Form-title">
+                <p class="Form-Exercise">Form Exercise</p>
               </div>
+                <div class="clearfix q8-form-container">
+                  <div class="q8-label">
+                    <div class="name-label q8-label-content">名前<span>*</span></div>
+                    <div class="gender q8-label-content">性別</div>
+                    <div class="graduate q8-label-content">出身</div>
+                    <div class="mail q8-label-content">Eメール<span>*</span></div>
+                    <div class="tel-number q8-label-content">電話番号</div>
+                  </div>
+                  <!--outline, border共にスタイルを消して:forcusにてフォーカスしたときのスタイルを当てる-->
+                  <div class="q8-text">
+                    <div class="q8-text_name q8-text-content">
+                      <input class="q8-text-name-input" type="text" name="name" required>
+                    </div>
+                    <!--:checkedにてスタイル-->
+                    <!-- 属性セレクタ(input[type=radio])にて指定したradioボタンをdisplya:none;にて非表示にして新たにスタイルを当てる -->
+                    <!-- radioボタン作成：labelタグにてラベルと部品(ボタン)をラッピングするとラベルとradio部品が関連づく。 -->
+                    <!--cursor:pointerにて部品、ラベル上にてマウスカーソルから指差しマークに変化する;-->
+                    <div class="q8-text_gender q8-text-content">
+                      <label class="q8-text-gender-male">
+                        <input class="q8-text-gender-input-male" type="radio" name="gender" value="male"><span class="q8-text_gender-male-span">男性</span>
+                      </label>
+                      <label class="q8-text-gender-female">
+                        <input class="q8-text-gender-input-female" type="radio" name="gender" value="female"><span class="q8-text_gender-female-span">女性</span>
+                      </label>
+                    </div>
+                    <!--cursor:pointer;-->
+                    <div class="q8-text_graduate q8-text-content">
+                      <select name="hometown" class="select-graduate">
+                        <option value="tokyo">東京</option>
+                        <option value="saitama">埼玉</option>
+                        <option value="chiba">千葉</option>
+                        <option value="kanagawa">神奈川</option>
+                      </select>
+                    </div>
+                    <div class="q8-text_mail q8-text-content">
+                      <input class="q8-text_mail-input" type="text" name="mail"  placeholder="ex) hoge@gmail.com" required>
+                    </div>
+                    <div class="q8-text_tel-number q8-text-content">
+                      <input class="q8-text_tel-number-input" type="text" name="tel"  placeholder="ex) 08012345678">
+                    </div>
+                    <!--:checkedにてスタイル-->
+                    <!--checkboxはlabelタグとボックス作る-->
+                    <div class="q8-text_age q8-text-content">
+                      <label class="q8-text_age-label">
+                        <!--checkboxの場合、nameとvalueがurlに記述、valueの意味-->
+                        <input class="q8-text_age-input" type="checkbox" name="twenty" value="true"><span class="q8-text_age-input-span">20歳以上です</span>
+                      </label>
+                    </div>
+                    <!--buttonタグにて-->
+                    <div class="q8-text_transmission q8-text-content">
+                      <button class="q8-text-button" type="submit">送信</button>
+                    </div>
+                  </div>
+                  <div class="q8-textarea_container">
+                    <textarea name="message" class="q8-textarea" placeholder="何かあれば入力してください"></textarea>
+                  </div>
+                </div>
             </form>
 
             
@@ -170,3 +170,4 @@
     </div>
   </body>
 </html>
+<!-- review formタグのインデント位置、囲ったタグと同じインデント位置になっている -->

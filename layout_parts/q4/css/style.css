@@ -5,34 +5,32 @@
   padding: 20px;
 }
 
-.box2{
+.cell-container{
   display:table;
   width:100%;
   text-align: center;
   margin-bottom:20px;
 }
 
-.box2:last-child{
+.cell-container:last-child{
   margin-bottom: 0;
 }
 
 .cell {
   padding: 20px;
+  display:table-cell;
 }
 
 .box-c-f-orange{
-  display: table-cell;
   width:100px;
   background-color: #fdc8b8;
 }
 
 .box-c-v-violet{
-  display: table-cell;
   background-color:#e0abd9;
 }
 
 .box-c-f-blue{
-  display: table-cell;
   width:100px;
   background-color:#b6d8ed;
 }
@@ -40,17 +38,14 @@
 /*ここまで上段*/
 
 .box-c-v-yellow{
-  display: table-cell;
   background-color:#e5d32e;
 }
 
 .box-c-v-red{
-  display: table-cell;
   background-color:#ec8f9a;
 }
 
 .box-c-f-green{
-  display: table-cell;
   width:500px;
   background-color:#8fdcad;
 }

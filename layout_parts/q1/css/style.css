@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
-.q1{
+.q1-contaniner{
   width:940px;
   background-color: #eff3f4;
   margin:0 auto;
@@ -24,7 +24,7 @@
   box-sizing: border-box;
 }
 
-.q1 .q1__content__box:first-child{
+.q1-contaniner .q1__content__box:first-child{
   margin-left:0;
 }
 
