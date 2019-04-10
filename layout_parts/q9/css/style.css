@@ -2,4 +2,130 @@
 
 /* 回答はここに書いてね */
 
+.car-photo-container {
+  width:500px;
+  height:333px;
+  overflow: hidden;
+  margin:0 auto;
+  position:relative;
+  cursor:pointer;
+  transition:all 0.5s;
+}
+
+
+/* 親要素をhoverした時、子要素を変化させるセレクタの記述
+子要素それぞれににhoverするように記述するとhove効かなくなる。hoverする画像の外や下に配置されると効かなくなる */
+
+.car-photo-container:hover .car-photo {
+  transform:scale(1.5);
+}
+
+.car-photo-container:hover .car-sentence-container {
+  top: 0;
+}
+
+.car-photo {
+  display: inline-block;
+  transition:all 0.5s;
+}
+
+/* rgbaはbackground-colorには当たらない。backgroundに当てる */
+
+.car-sentence-container {
+  position: absolute;
+  top:100%;
+  left:0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+  transition:all 0.5s;
+}
+
+.car-sentence-container:hover {
+  position: absolute;
+  top:0px;
+  left:0;
+}
+
+/* absoluteはrelativeに対して絶対配置するが、
+absolute当たった要素にabsoluteの兄があれば
+relativeではなくて兄にたいして絶対配置する */
+
+.car-sentence {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width:100%;
+  padding: 20px; 
+  box-sizing: border-box; 
+  font-size:16px;
+  line-height: 16px;
+  color: white;
+  word-break: break-all;
+}
+
+
+.car-sentence:hover {
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 20px;
+}
+
+/* ここまでtransitionのアニメーション */
+
+.loading {
+  margin:0 auto;
+  content:"";
+  height:100px;
+  width:100px;
+  border-radius: 50%;
+  border:solid 10px #ecf1f2;
+  border-top:solid 10px #00bcd4;
+  position: relative;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 1.1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes loading  {
+  form{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+/*positionで重ねる場合のテスト
+.loading2 {
+  position: relative;
+}
+
+.loading3 {
+  margin:100px;
+  content:"";
+  height:100px;
+  width:100px;
+  border:solid 10px #ecf1f2;
+  box-sizing:border-box;
+  position: relative;
+}
+
+
+.loading3:after {
+  margin:100px;
+  content:"";
+  height:100px;
+  width:100px;
+  border-top:solid 10px #00bcd4;
+  box-sizing:border-box;
+  position: absolute;
+  top:0;
+  left:0;
+}
+*/
+
+
 /* 回答はここに書いてね */

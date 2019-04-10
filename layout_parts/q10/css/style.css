@@ -2,4 +2,40 @@
 
 /* 回答はここに書いてね */
 
+.q10-container {
+  margin:0 auto;
+  border:solid 5px #222;
+  border-radius: 30px;
+  width:500px;
+  padding:20px;
+  position: relative;
+}
+
+/* 三角同士の位置 */
+
+.q10-container:before {
+  content: "";
+  position: absolute;
+  bottom: -38px;
+  left: 30px;
+  border: 20px solid transparent;
+  border-top: 20px solid #FFF;
+  z-index: 2;
+}
+.q10-container:after {
+  content: "";
+  position: absolute;
+  bottom: -45px;
+  left: 30px;
+  border: 20px solid transparent;
+  border-top: 20px solid #222;
+  z-index: 1;
+}
+
+
+
+.q10-container p {
+  font-size: 16px;
+}
+
 /* 回答はここに書いてね */

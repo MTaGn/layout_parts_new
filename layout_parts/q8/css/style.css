@@ -2,4 +2,450 @@
 
 /* 回答はここに書いてね */
 
+.q8-button {
+  display:inline-block;
+  margin-left:10px;
+}
+
+.q8-common {
+  margin-left:0;
+  cursor:pointer;
+}
+
+.q8-small {
+  font-size: 16px;
+  border-radius: 3px;
+  padding: 0 15px;
+  line-height:26px;
+}
+
+.q8-middle {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0 20px;
+  line-height:32px;
+}
+
+.q8-large {
+  font-size: 24px;
+  border-radius: 7px;
+  padding: 0 25px;
+  line-height:38px;
+}
+
+.q8-common {
+  background-color: #00bcd4;
+  color:white;
+}
+
+.q8-error {
+  background-color: #ff4081;
+  color:white;
+}
+
+.q8-disabled {
+  background-color: #e5e5e5;
+  color:white;
+}
+
+.q8-shadow {
+  color: #222;
+  box-shadow: 0 1px 6px rgba(0,0,0, 0.12), 0 1px 4px rgba(0,0,0, 0.12);
+}
+
+/* ここまでボタン作成 */
+
+.q8-background {
+  background-color: #eff3f4;
+  width:700px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/*margin:0;autoはwidthを指定していないと効かないはず*/
+
+
+.Form-title {
+  width:700px; 
+  position: relative;
+  margin-bottom:20px;
+}
+
+/* Form-titleにrelative当てるとレイアウト崩れる？ */
+
+.Form-Exercise {
+  background-color: #eff3f4; 
+  position: relative; 
+  font-weight:bold;
+  font-size: 24px;
+  display: inline-block;
+  padding-right:10px;
+}
+
+
+ .Form-title:before {
+  position:absolute;
+  left:0px; 
+  top:50%; 
+  display:block;
+  content:""; 
+  border-top:solid 1px #ccc;
+  width:100%;
+} 
+
+/*absoluteはインライン要素、ブロック要素どちらにもに効く
+疑似要素はインライン要素なのでblockのスタイル当てる。
+relativeが指定された要素は高さが0になる！？
+position当てた時の重なり順：position無し・inline-block(下層)、position(上層)、positin当たっているもの同士は同階層*/
+
+
+/* ここからラベル */
+
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.q8-label {
+  float:left;
+  width:100px;
+  text-align:end;
+  margin-right:20px;
+}
+
+.q8-label span{
+  color:red;
+}
+
+.gender {
+  margin-top:29.6px;
+}
+
+/*
+.q8-label-content {
+  margin-top:20px;
+}
+
+.q8-label-content:first-child {
+  margin-top:0;
+}
+*/
+
+
+/* ここまでラベル */
+
+
+/* ここからショートテキスト */
+
+.q8-text {
+  float:left;
+  width:180px;
+}
+
+.q8-text-content {
+  margin-top:21px;
+}
+
+
+/*ここから名前のショートテキスト */
+.q8-text-name-input {
+  outline: none;
+  border:none;
+  padding:5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  width:100%;
+}
+
+
+.q8-text-name-input:focus {
+  box-shadow:0 0 8px #00BCD4;
+}
+
+
+/* ここから性別のラジオボタン */
+
+/* inputタグのイニシャルのスタイルを非表示 */
+
+.q8-text_gender {
+  text-align: left;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+/* 男性、女性ラベルのスタイル */
+
+.q8-text_gender-male-span {
+  position:relative;
+  padding: 3px 3px 3px 20px; 
+}
+
+.q8-text_gender-female-span {
+  display: inline-block;
+  position:relative;
+  padding: 3px 3px 3px 20px; 
+}
+
+/* 男性、女性ラベルの前にラジオボタンの元になる〇をスタイル。〇の上下左右は男性、女性ラベルを基準にabsoluteで指定 */
+
+.q8-text_gender-male-span:before{
+  position: absolute;
+  top:13%;
+  left:0;
+  content: "";
+  background-color: #FFF;
+  height:14px;
+  width: 14px;
+  border:solid 1px #ccc;
+  border-radius: 50%;
+}
+
+.q8-text_gender-female-span:before{
+  position: absolute;
+  top:13%;
+  left:0;
+  content: "";
+  background-color: #FFF;
+  height:14px;
+  width: 14px;
+  border:solid 1px #ccc;
+  border-radius: 50%;
+}
+
+/* ラジオボタンにチェックを入れる */
+
+/* チェックが入ると〇の中に色がつくようにする。下記の隣接セレクタ以降は〇のスタイルのセレクタを指定しているつもり
+before/after片方だけではチェックボックスできない●ずれる、〇消える 
+beforeを二回使用しても、beforeは疑似要素でspan要素内にはbefore要素は一つしかないので二種類のスタイルは同時に実現できない*/
+input[type=radio]:checked+span:after{
+  position:absolute;
+  top:31%;
+  left:4px;
+  height:8px;
+  width:8px;
+  border-radius: 50%;
+  content:"";
+  background-color: #00bcd4;
+}
+
+/* checkedのマークがずれ、元々の〇checkboxが消える afterでつけてる */
+
+.q8-text-gender-male, .q8-text-gender-female {
+  cursor: pointer;
+}
+
+/* outlineをぼやけさせるには */
+
+.q8-text-content:first-child {
+  margin-top:0px;
+}
+
+
+/* ここから出身のショートテキスト */
+
+.q8-text_graduate {
+  position: relative
+}
+
+.graduate {
+  margin-top:28px;
+}
+
+.select-graduate {
+  outline:none;
+  border:none;
+  padding:5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  width:100%;
+  padding: 5px;
+  -webkit-appearance: none;
+}
+
+/* selectタグにrealative, afterにabsoluteだとマークがでない */
+
+.q8-text_graduate:after {
+  position: absolute;
+  top:4px;
+  right:10px;
+  content:"";
+  width:8px;
+  height:8px;
+  border-right:2px solid #E5E5E5;
+  border-bottom:2px solid #E5E5E5;
+  transform:rotate(45deg);
+}
+
+
+/* ここからEメールのショートテキスト */
+
+
+.mail {
+  margin-top:24.2px;
+}
+
+.q8-text_mail-input {
+  outline:none;
+  border:none;
+  padding:5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  width:100%;
+}
+
+.q8-text_mail-input:focus {
+  box-shadow:0 0 8px  #00BCD4;
+}
+
+/* outlineをぼやけさせるには */
+
+
+/* ここから電話番号のショートテキスト */
+
+.tel-number {
+  margin-top:27.6px;
+}
+
+.q8-text_tel-number-input {
+  outline:none;
+  border:none;
+  padding:5px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  width:100%;
+}
+
+.q8-text_tel-number-input:focus {
+  box-shadow:0 0 8px #00BCD4;
+}
+
+
+/* ここから年齢のチェックボックス */
+
+
+.q8-text_age input[type=checkbox] {
+  display:none;
+}
+
+/* インライン要素はposition指定、もしくは幅、block要素指定しないと幅が出なくなるので気を付ける */
+
+.q8-text_age {
+  text-align: right;
+}
+
+/* beforeをabsoluteで位置調整するのでspan要素にdisplya-block付けて高さがわかるようにした */
+
+.q8-text_age-input-span {
+  position: relative;
+  padding-left:24px;
+  display: inline-block;
+}
+
+.q8-text_age-input-span:before {
+  position: absolute;
+  top:0%;
+  left:0;
+  height:16px;
+  width: 16px;
+  border:solid 1px #ccc;
+  background: #fff;
+  content:"";
+  padding:1px;
+  margin-top:-2px;
+}
+
+/* [], +を使うのはたぶんinputで囲った要素等にスタイル当てないためか、クラス書かなくて良くて楽だから */
+
+input[type=checkbox]:checked+span:after {
+  position: absolute;
+  top:0%;
+  left:3px;
+  height:8px;
+  width: 16px;
+  border-left:solid 3px #00BCD4;
+  border-bottom:solid 3px #00BCD4;
+  transform: rotate(-45deg);
+  content:"";
+}
+
+/* outlineをぼやけさせるには */
+
+/* ここから送信ボタン */
+
+.q8-text_transmission {
+  text-align: right;
+}
+
+.q8-text-button {
+  outline: none;
+  border: none;
+  background-color: #00bcd4;
+  color:#FFF;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 26px;
+  cursor:pointer;
+  padding: 0 10px;
+}
+
+/* :checkedと:activeは違う */
+
+button:active {
+  background-color: #FFF;
+  color:#00BCD4;
+}
+
+
+/* ここからテキストエリア */
+/* 角に何か入っている */
+
+.q8-textarea_container {
+  float:right;
+  width:380px;
+}
+
+.q8-textarea {
+  width:100%;
+  height:203px;
+  outline:none;
+  border:none;
+  padding:10px;
+  border-radius: 3px;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  resize:none;
+}
+
+.q8-textarea:focus {
+  box-shadow:0 0 8px  #00BCD4;
+}
+
+/*フォームのスタイルをフラットにする(リセットcssでは:focus, :active等はリセットされないらしい？)
+
+radio, checkboxのスタイル(:checked, +(隣接セレクタ)
+
+フォーム内容を送信後にurlのパラメータが追加される状態にする(formnのaction属性、method属性が関係)
+
+必須項目を空にしたまま送信するとアラートがでるように*/
+
+
+
 /* 回答はここに書いてね */

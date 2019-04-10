@@ -2,4 +2,111 @@
 
 /* 回答はここに書いてね */
 
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.sentence{
+  float:left;
+  width:225px;
+  font-size: 16px;
+  margin-left:50px;
+  box-sizing: border-box;
+}
+
+.container .sentence:first-child {
+  margin-left: 0;
+}
+
+/* ここまでfloatによる横並び */
+
+.q7-2__container {
+  display: table;
+}
+
+.inner-container {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 50px;
+}
+
+.inner-container:first-child {
+  padding-left: 0;
+}
+
+.q7-2__sentence {
+  width:225px;
+  font-size:16px;
+  box-sizing: border-box;
+}
+
+.inner-container:first-child {
+  margin-left:50px;
+}
+
+/* ここまでtable-cellによる横並び  */
+
+.q7-3__inner-container {
+  font-size: 0;
+}
+
+.q7-3__sentence {
+  display: inline-block;
+  width:225px;
+  font-size: 16px;
+  margin-left: 50px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.q7-3__sentence:first-child {
+  margin-left: 0;
+}
+
+/* ここまでinine-blockによる横並び */
+
+.q7-4__inner-container {
+  display:flex;
+  align-items: flex-end;
+}
+
+.q7-4__sentence {
+  width:225px;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+
+/*ここまでflexによる横並び*/
+
+.q7-5__container {
+  font-size: 0;
+}
+
+.q7-5__inner-container {
+  font-size: 16px;
+  }
+
+.q7-5__inner-container__fixed {
+  width:300px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align:top;
+}
+
+.q7-5__inner-container__variable {
+  box-sizing: border-box;
+  margin-left:-300px;
+  padding-left:350px;
+  width:100%;
+  display: inline-block;
+}
+
+/*横並び要素の親要素にinline-blockを当てずに、横並び兄弟要素にあてた場合、
+親要素の幅が100%になってカラム落ちになることに気を付ける
+片方が固定でなければinlin-blcokとネガティブマージンを使用しても横並びできない*/
+/*ここまでinline-block、ネガティブマージンによる固定、可変の横並び*/
+
+
 /* 回答はここに書いてね */
