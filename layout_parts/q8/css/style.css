@@ -7,11 +7,6 @@
   margin-left:10px;
 }
 
-.q8-common {
-  margin-left:0;
-  cursor:pointer;
-}
-
 .q8-small {
   font-size: 16px;
   border-radius: 3px;
@@ -36,6 +31,8 @@
 .q8-common {
   background-color: #00bcd4;
   color:white;
+  margin-left:0;
+  cursor:pointer;
 }
 
 .q8-error {
